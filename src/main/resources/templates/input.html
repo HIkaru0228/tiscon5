@@ -19,6 +19,11 @@
       <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
     </ul>
     <div class="col-sm-12">
+      <p>
+        無料で簡単なお見積もりを行います。
+        <br>
+        以下のフォームにご記入いただき、確認ボタンをクリックしてください。
+      </p>
       <fieldset>
         <legend>個人情報</legend>
         <div class="form-group">
@@ -35,13 +40,13 @@
         </div>
         <div class="form-group">
           <label for="oldPrefectureId">転居元住所（都道府県）</label>
-          <select id="oldPrefectureId" name="oldPrefectureId" class="form-control">
+          <select id="oldPrefectureId" name="oldPrefectureId" class="form-control" style="width:200px;">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
           <label for="newPrefectureId">転居先住所（都道府県）</label>
-          <select id="newPrefectureId" name="newPrefectureId" class="form-control">
+          <select id="newPrefectureId" name="newPrefectureId" class="form-control" style="width:200px;">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
