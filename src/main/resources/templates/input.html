@@ -51,31 +51,31 @@
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
-        </div>>
+        </div>
       </fieldset>
       <fieldset>
         <legend>荷物情報</legend>
         <div class = "background">
         <div class="form-group">
           <label for="box">段ボールの個数</label>
-          <input type="number" id="box" name="box" th:field="*{box}" class="form-control" value="10" style="width:100px;"/>
+          <input type="number" id="box" name="box" th:field="*{box}" class="form-control" value="10" style="width:100px;" min="0"/>
         </div>
         <div class="form-group">
           <label for="bed">ベッドの個数</label>
-          <input type="number" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3" style="width:100px;"/>
+          <input type="number" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3" style="width:100px;" min="0"/>
         </div>
         <div class="form-group">
           <label for="bicycle">自転車の個数</label>
-          <input type="number" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1" style="width:100px;"/>
+          <input type="number" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1" style="width:100px;" min="0"/>
         </div>
         <div class="form-group">
           <label for="washingMachine">洗濯機の個数</label>
           <input type="number" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
-                 value="1" style="width:100px;"/>
+                 value="1" style="width:100px;" min="0"/>
         </div>
         <div class="form-group">
           <label for="hasWashingMachineSettingOption">洗濯機の設置工事申し込み</label>
-          <select id="hasWashingMachineSettingOption" name="hasWashingMachineSettingOption" class="form-control" th:field="*{hasWashingMachineSettingOption}">
+          <select id="hasWashingMachineSettingOption" name="hasWashingMachineSettingOption" class="form-control" th:field="*{hasWashingMachineSettingOption}" style="width:200px;">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
           </select>
