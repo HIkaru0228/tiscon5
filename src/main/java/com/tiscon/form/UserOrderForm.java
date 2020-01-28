@@ -85,11 +85,11 @@ public class UserOrderForm {
     }
 
     public String getOldAddress() {
-        return oldAddress;
+        return "旧住所";
     }
 
     public void setOldAddress(String oldAddress) {
-        this.oldAddress = oldAddress;
+        this.oldAddress = "旧住所";
     }
 
     public String getNewPrefectureId() {
@@ -101,11 +101,11 @@ public class UserOrderForm {
     }
 
     public String getNewAddress() {
-        return newAddress;
+        return "新住所";
     }
 
     public void setNewAddress(String newAddress) {
-        this.newAddress = newAddress;
+        this.newAddress = "新住所";
     }
 
     public String getBox() {
