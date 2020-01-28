@@ -40,13 +40,13 @@
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com" placeholder="例）xxxxx@tiscon.com"/>
         </div>
         <div class="form-group">
-          <label for="oldPrefectureId">転居元住所（都道府県）</label>
+          <label for="oldPrefectureId">現住所（都道府県）</label>
           <select id="oldPrefectureId" name="oldPrefectureId" class="form-control" style="width:200px;">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="newPrefectureId">転居先住所（都道府県）</label>
+          <label for="newPrefectureId">お引越し先住所（都道府県）</label>
           <select id="newPrefectureId" name="newPrefectureId" class="form-control" style="width:200px;">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
@@ -58,7 +58,7 @@
         <div class = "background">
         <div class="form-group">
           <label for="box">段ボールの個数</label>
-          <input type="number" id="box" name="box" th:field="*{box}" class="form-control" value="10" style="width:100px;" min="0"/>
+          <input type="number" id="box" name="box" th:field="*{box}" class="form-control" value="0" style="width:100px;" min="0"/>
         </div>
         <div class="form-group">
           <label for="bed">ベッドの個数</label>
