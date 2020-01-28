@@ -1,6 +1,7 @@
 package com.tiscon.controller;
 
 import com.tiscon.dao.EstimateDao;
+import com.tiscon.domain.Prefecture;
 import com.tiscon.dto.UserOrderDto;
 import com.tiscon.form.UserOrderForm;
 import com.tiscon.service.EstimateService;
@@ -11,6 +12,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 /**
  * 引越し見積もりのコントローラークラス。
@@ -51,8 +54,17 @@ public class EstimateController {
         if (!model.containsAttribute("userOrderForm")) {
             model.addAttribute("userOrderForm", new UserOrderForm());
         }
+        List<Prefecture> allPrefectures = estimateDAO.getAllPrefectures();
+        for (Prefecture prefecture: allPrefectures) {
+            if ("01".equals(prefecture.getPrefectureId())) {
+                System.out.println("★北海道みつけた！");
 
-        model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
+            }
+            prefecture.getPrefectureName();
+
+        }
+
+        model.addAttribute("prefectures", allPrefectures);
         return "input";
     }
 
