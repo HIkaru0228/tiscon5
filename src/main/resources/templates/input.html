@@ -34,13 +34,13 @@
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com" placeholder="例）xxxxx@tiscon.com"/>
         </div>
         <div class="form-group">
-          <label for="oldPrefectureId">現在の住所（都道府県）</label>
+          <label for="oldPrefectureId">転居元住所（都道府県）</label>
           <select id="oldPrefectureId" name="oldPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="newPrefectureId">引っ越し先住所（都道府県）</label>
+          <label for="newPrefectureId">転居先住所（都道府県）</label>
           <select id="newPrefectureId" name="newPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
@@ -50,7 +50,7 @@
         <legend>荷物情報</legend>
         <div class="form-group">
           <label for="box">段ボールの個数</label>
-          <input type="number" id="box" name="box" th:field="*{box}" class="form-control" value="10" placeholder="例）単身の場合:10～15個程度" style="width:300px;"/>
+          <input type="number" id="box" name="box" th:field="*{box}" class="form-control" value="10" style="width:100px;"/>
         </div>
         <div class="form-group">
           <label for="bed">ベッドの個数</label>
@@ -67,7 +67,7 @@
         </div>
         <div class="form-group">
           <label for="hasWashingMachineSettingOption">洗濯機の設置工事申し込み</label>
-          <select id="hasWashingMachineSettingOption" name="hasWashingMachineSettingOption" class="form-control" th:field="*{hasWashingMachineSettingOption}" style="width:100px;">
+          <select id="hasWashingMachineSettingOption" name="hasWashingMachineSettingOption" class="form-control" th:field="*{hasWashingMachineSettingOption}">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
           </select>
