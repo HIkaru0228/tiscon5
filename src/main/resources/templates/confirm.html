@@ -24,7 +24,7 @@
         <tr>
           <th style="width: 40%">氏名</th>
           <td><span th:text="*{customerName}"></span>
-            <span th:if="${#fields.hasErrors('customerName')}"  th:errors="*{customerName}">Error</span>
+            <span th:if="${#fields.hasErrors('customerName')}"  th:errors="*{customerName}" style="color:red;">Error</span>
 
           </td>
           <input type="hidden" name="customerName" id="customerName" th:value="*{customerName}"/>
@@ -32,13 +32,13 @@
         <tr>
           <th>連絡先TEL</th>
           <td><span th:text="*{tel}"></span>
-            <span th:if="${#fields.hasErrors('tel')}"  th:errors="*{tel}">Error</span>          </td>
+            <span th:if="${#fields.hasErrors('tel')}"  th:errors="*{tel}" style="color:red;">Error</span>          </td>
           <input type="hidden" name="tel" id="tel" th:value="*{tel}"/>
         </tr>
         <tr>
           <th>連絡先メールアドレス</th>
           <td><span th:text="*{email}"></span>
-            <span th:if="${#fields.hasErrors('email')}"  th:errors="*{email}">Error</span>
+            <span th:if="${#fields.hasErrors('email')}"  th:errors="*{email}" style="color:red;">Error</span>
           </td>
           <input type="hidden" name="email" id="email" th:value="*{email}"/>
         </tr>
