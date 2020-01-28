@@ -18,7 +18,7 @@ body {
 .jumbotron {
     background-repeat: no-repeat;
     background-position: calc(60%) calc(70%);
-    background-image: url("../img/top.jpg");
+    background-image: url("https://imgcp.aacdn.jp/img-a/1200/900/aa/gm/article/7/2/0/9/7/topimg_original.jpg");
     background-size: cover;
     height: 100vh;
     margin-bottom: 0px;
@@ -32,12 +32,10 @@ body {
 }
 
 .btn-top {
-    width: 30%;
+    width: 50%;
 }
 
-.ui.main.container {
-    padding-top: 80px;
-}
+
 
 a.logo {
     font-family: 'Exo', sans-serif;
@@ -46,7 +44,18 @@ a.logo {
 
 .bland-message {
     font-family: "Sawarabi Mincho";
-    font-size: 36px;
+    font-size: 45px;
+}
+.bland-description{
+    font-family: "ヒラギノ角ゴ Pro W6";
+    font-size: 18px;
+}
+.aaa{
+font-family: "Sawarabi Mincho";
+font-size: 50px;
+}
+.abc{
+font-size: 100px;
 }
 
 div.center.column {
@@ -153,11 +162,11 @@ ul.label {
 .index-block{
     margin: 0 auto;
     width: 800px;
-    justify-content:space-around;
+    justify-ent:space-around;
     display: flex;
 }
 
-.index-icon {
+.index-con {
     padding:0.5em 1em;
     margin:2em 0;
     font-weight:bold;
