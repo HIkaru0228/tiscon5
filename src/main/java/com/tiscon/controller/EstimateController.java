@@ -55,8 +55,13 @@ public class EstimateController {
         UserOrderForm form = new UserOrderForm();
         form.setOldPrefectureId("13");
         form.setNewPrefectureId("13");
+        form.setBed("0");
+        form.setBox("0");
+        form.setBicycle("0");
+        form.setWashingMachine("0");
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", form);
+
         return "input";
     }
 
