@@ -53,6 +53,7 @@ public class EstimateController {
         }
 
         UserOrderForm form = new UserOrderForm();
+        form.setOldPrefectureId("13");
         form.setNewPrefectureId("13");
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", form);
